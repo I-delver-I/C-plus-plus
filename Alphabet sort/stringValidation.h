@@ -3,4 +3,4 @@
 using namespace std;
 
 bool validateOnlyLetters(string stringToValidate);
-bool validateOneRegister(string stringToValidate);
+bool validateOnlyRegister(string stringToValidate);

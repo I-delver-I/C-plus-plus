@@ -31,7 +31,7 @@ string captureString()
 			errorOccured = true;
 			cout << "The string includes not only letters" << endl;
 		}
-		else if (!validateOneRegister(result))
+		else if (!validateOnlyRegister(result))
 		{
 			errorOccured = true;
 			cout << "The string's letters doesn't have the same register" << endl;

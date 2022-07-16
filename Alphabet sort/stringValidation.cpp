@@ -13,7 +13,7 @@ bool validateOnlyLetters(string stringToValidate)
 	return true;
 }
 
-bool validateOneRegister(string stringToValidate)
+bool validateOnlyRegister(string stringToValidate)
 {
 	bool shouldBeLower = islower(stringToValidate[0]);
 
