@@ -139,11 +139,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="capturer.cpp" />
     <ClCompile Include="stringSorting.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="stringValidation.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="capturer.h" />
     <ClInclude Include="stringSorting.h" />
     <ClInclude Include="stringValidation.h" />
   </ItemGroup>

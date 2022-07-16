@@ -24,12 +24,18 @@
     <ClCompile Include="stringValidation.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="capturer.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stringSorting.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="stringValidation.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="capturer.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>
