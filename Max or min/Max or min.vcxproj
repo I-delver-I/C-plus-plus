@@ -139,13 +139,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="matrixFunctions.cpp" />
+    <ClCompile Include="capturer.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="validator.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="capturer.h" />
     <ClInclude Include="matrixFunctions.h" />
-    <ClInclude Include="peek.h" />
+    <ClInclude Include="peak.h" />
     <ClInclude Include="validator.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
