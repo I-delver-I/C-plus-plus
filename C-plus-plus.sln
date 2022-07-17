@@ -7,6 +7,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Alphabet sort", "Alphabet s
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Max or min", "Max or min\Max or min.vcxproj", "{D70E490E-4302-4F2E-A3F8-6E546CF82760}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Finantial activities", "Finantial activities\Finantial activities.vcxproj", "{D968B0C3-804C-481B-8DDD-B47108A99ED2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -31,6 +33,14 @@ Global
 		{D70E490E-4302-4F2E-A3F8-6E546CF82760}.Release|x64.Build.0 = Release|x64
 		{D70E490E-4302-4F2E-A3F8-6E546CF82760}.Release|x86.ActiveCfg = Release|Win32
 		{D70E490E-4302-4F2E-A3F8-6E546CF82760}.Release|x86.Build.0 = Release|Win32
+		{D968B0C3-804C-481B-8DDD-B47108A99ED2}.Debug|x64.ActiveCfg = Debug|x64
+		{D968B0C3-804C-481B-8DDD-B47108A99ED2}.Debug|x64.Build.0 = Debug|x64
+		{D968B0C3-804C-481B-8DDD-B47108A99ED2}.Debug|x86.ActiveCfg = Debug|Win32
+		{D968B0C3-804C-481B-8DDD-B47108A99ED2}.Debug|x86.Build.0 = Debug|Win32
+		{D968B0C3-804C-481B-8DDD-B47108A99ED2}.Release|x64.ActiveCfg = Release|x64
+		{D968B0C3-804C-481B-8DDD-B47108A99ED2}.Release|x64.Build.0 = Release|x64
+		{D968B0C3-804C-481B-8DDD-B47108A99ED2}.Release|x86.ActiveCfg = Release|Win32
+		{D968B0C3-804C-481B-8DDD-B47108A99ED2}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

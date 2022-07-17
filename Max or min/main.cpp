@@ -112,7 +112,7 @@ void printMatrix(T** matrix, const int rowsCount, const int columnsCount)
 	{
 		for (size_t y = 0; y < columnsCount; y++)
 		{
-			cout << setw(5) << matrix[i][y] << " ";
+			cout << setw(10) << matrix[i][y] << " ";
 		}
 
 		cout << endl;
