@@ -4,7 +4,8 @@
 #include<nlohmann/json.hpp>
 using json = nlohmann::json;
 
-const string filePath = "Companies.json";
+const string mainFilePath = "Companies.json";
+const string secondaryFilePath = "Positive deviation companies.json";
 
-void writeCompaniesToFile(CompaniesContainer companies);
-CompaniesContainer readCompaniesFromFile();
+void writeCompaniesToFile(const string filePath, CompaniesContainer& companies);
+CompaniesContainer readCompaniesFromFile(const string filePath);

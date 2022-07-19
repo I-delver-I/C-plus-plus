@@ -1,23 +1,22 @@
 #include"fileManager.h"
 
-void writeCompaniesToFile(CompaniesContainer companies)
+void writeCompaniesToFile(const string filePath, CompaniesContainer& companies)
 {
-	ofstream file(filePath, ios::app);
-	//json data = json::parse(num);
-	//file << data;
-	file.close();
+	ofstream outputFile(filePath, ios::trunc);
+	json data = companies;
+	outputFile << data;
+	outputFile.close();
 }
 
-CompaniesContainer readCompaniesFromFile()
+CompaniesContainer readCompaniesFromFile(const string filePath)
 {
 	CompaniesContainer result;
-	ifstream file(filePath, ios::in);
-	json temp;
-	file >> temp;
-	file.close();
 
-	//result = CompaniesContainer(temp);
-	//result
+	ifstream inputFile(filePath, ios::in);
+	json temp;
+	inputFile >> temp;
+	result = temp;
+	inputFile.close();
 
 	return result;
 }

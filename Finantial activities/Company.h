@@ -25,7 +25,7 @@ public:
 	void setIncome(double income);
 	const double getSalaryAccrual();
 	void setSalaryAccrual(double salaryAccrual);
-	const double getProfit();
+	double getProfit();
 	friend ostream& operator<<(ostream& os, const Company& company);
 	friend void from_json(const json& j, Company& c);
 	friend void to_json(json& j, const Company& c);

@@ -11,3 +11,5 @@ void printCollection(vector<T> collection)
 		cout << element << endl;
 	}
 }
+
+void printHorizontalRule();

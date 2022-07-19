@@ -94,12 +94,18 @@ void Company::setSalaryAccrual(double salaryAccrual)
 	profit = income - salaryAccrual;
 }
 
-const double Company::getProfit()
+double Company::getProfit()
 {
 	return profit;
 }
 
-Company::Company() = default;
+Company::Company()
+{
+	name = "Company";
+	month = 0;
+	income = 0;
+	salaryAccrual = 0;
+}
 
 Company::Company(string name, int month, double income, double salaryAccrual)
 {

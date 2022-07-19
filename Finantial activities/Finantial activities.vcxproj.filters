@@ -38,9 +38,6 @@
     <ClInclude Include="Company.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="resource.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
     <ClInclude Include="CompaniesContainer.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>

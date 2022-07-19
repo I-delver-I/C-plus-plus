@@ -4,6 +4,7 @@
 #include"output.h"
 #include"fileManager.h"
 #include<fstream>
+#include"capturer.h"
 #include<nlohmann/json.hpp>
 using namespace std;
 using json = nlohmann::json;
@@ -18,43 +19,11 @@ using json = nlohmann::json;
 
 int main()
 {
-	CompaniesContainer companies;
-	Company first = Company("first", 1, 234, 200);
-	companies.addCompany(first);
-	Company second = Company("second", 2, 100, 50);
-	companies.addCompany(second);
-	//writeCompaniesToFile(companies);
+	CompaniesContainer companies = captureCompanies();
+	writeCompaniesToFile(mainFilePath, companies);
+	cout << endl << "The entered companies are: " << endl << readCompaniesFromFile(mainFilePath);
 
-	/*ofstream inputFile;
-	inputFile.open(filePath, ios::in);
-	inputFile.write(reinterpret_cast<char *>(&test), sizeof(test));
-	inputFile.close();
-	
-	ifstream file;
-	vector<Company> result;
-	file.open(filePath, ios::in);
-	file.read(reinterpret_cast<char *> (&result), sizeof(result));
-	file.close();
-
-	for (Company company : test)
-	{
-		cout << company << endl;
-	}*/
-
-	/*ofstream inputFile(filePath);
-	json test = json::parse(first);
-	inputFile << test;
-	inputFile.close();
-
-	ifstream file(filePath);
-	json res;
-	file >> res;
-	file.close();
-
-	cout << res;*/
-
-	json test = companies;
-	cout << "Companies: " << endl << companies << endl;
-
-	//printCollection(readCompaniesFromFile().getCompanies());
+	auto positiveDeviationCompanies = CompaniesContainer(companies.getCompaniesWithPositiveDeviation());
+	writeCompaniesToFile(secondaryFilePath, positiveDeviationCompanies);
+	cout << endl << "The positive deviation companies are: " << endl << readCompaniesFromFile(secondaryFilePath);
 }
