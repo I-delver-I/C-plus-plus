@@ -1,5 +1,12 @@
 #include "CompaniesContainer.h"
 
+CompaniesContainer::CompaniesContainer() = default;
+
+CompaniesContainer::CompaniesContainer(vector<Company> companies)
+{
+	this->companies = companies;
+}
+
 void CompaniesContainer::addCompany(Company companyToAdd)
 {
 	if (exists(companyToAdd))
@@ -28,4 +35,28 @@ bool CompaniesContainer::exists(Company companyToCheck)
 	return false;
 }
 
-vector<Company> CompaniesContainer::companies;
+ostream& operator<<(ostream& os, const CompaniesContainer& companies)
+{
+	for (Company company : companies.companies)
+	{
+		os << company << endl;
+	}
+
+	return os;
+}
+
+void to_json(json& j, const CompaniesContainer& c)
+{
+	for (Company company : c.companies)
+	{
+		j.push_back(company);
+	}
+}
+
+void from_json(const json& j, CompaniesContainer& c)
+{
+	while (!j.empty())
+	{
+		c.addCompany(j.get<Company>());
+	}
+}

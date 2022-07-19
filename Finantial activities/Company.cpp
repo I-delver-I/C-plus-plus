@@ -1,5 +1,20 @@
 #include "Company.h"
 
+void to_json(json& j, const Company& c)
+{
+	j = json{ {"name", c.name}, {"month", c.month}, {"income", c.income}, {"salaryAccrual", c.salaryAccrual},
+		{"profit", c.profit} };
+}
+
+void from_json(const json& j, Company& c)
+{
+	j.at("name").get_to(c.name);
+	j.at("month").get_to(c.month);
+	j.at("income").get_to(c.income);
+	j.at("salaryAccrual").get_to(c.salaryAccrual);
+	j.at("profit").get_to(c.profit);
+}
+
 ostream& operator<<(ostream& os, const Company& company)
 {
 	os << "Name - " << company.name << ", Month - " << company.month << ", Income - " << company.income
@@ -84,10 +99,7 @@ const double Company::getProfit()
 	return profit;
 }
 
-Company::Company()
-{
-
-}
+Company::Company() = default;
 
 Company::Company(string name, int month, double income, double salaryAccrual)
 {

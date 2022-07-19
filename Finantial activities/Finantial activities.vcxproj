@@ -72,15 +72,19 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(ProjectDir)json-develop;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(ProjectDir)json-develop;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(ProjectDir)json-develop;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(ProjectDir)json-develop;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -142,6 +146,7 @@
     <ClCompile Include="capturer.cpp" />
     <ClCompile Include="CompaniesContainer.cpp" />
     <ClCompile Include="Company.cpp" />
+    <ClCompile Include="fileManager.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="output.cpp" />
   </ItemGroup>
@@ -149,6 +154,7 @@
     <ClInclude Include="capturer.h" />
     <ClInclude Include="CompaniesContainer.h" />
     <ClInclude Include="Company.h" />
+    <ClInclude Include="fileManager.h" />
     <ClInclude Include="output.h" />
     <ClInclude Include="resource.h" />
   </ItemGroup>
